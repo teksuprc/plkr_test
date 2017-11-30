@@ -10,8 +10,7 @@ img {
 }
 
 .phonediv {
-  border: 1px solid red;
   overflow: scroll;
-  width: 320px;
-  height: 200px;
+  width: 420px;
+  height: 280px;
 }
