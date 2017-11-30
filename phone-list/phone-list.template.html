@@ -1,8 +1,8 @@
 <center>
-<div class='container-fluid' />
-  <div class='row'>
+<div>
+  <div>
     
-    <div class='col-md-2'>
+    <div>
       <p>
         Search: <input ng-model='$ctrl.query' />
       </p>
@@ -14,14 +14,14 @@
         </select>
       </p>
     </div>
-    
-    <div class='col-md-10'>
+    <hr/>
+    <div class='phonediv'>
       <ul class='phones'>
         <li ng-repeat="phone in $ctrl.phones | filter:$ctrl.query | orderBy:$ctrl.orderProp" class='thumbnail'>
           <a href='http://angular.github.io/angular-phonecat/step-8/app/phones/{{phone.id}}' class='thumbnail'>
             <img ng-src='http://angular.github.io/angular-phonecat/step-8/app/{{phone.imageUrl}}' alt='{{phone.name}}' />
           </a>
-          <a href='#/phones/{{phone.name}}'></a>
+          <a href='#/phones/{{phone.name}}'>{{phone.name}}</a>
           <p>{{phone.snippet}}</p>
         </li>
       </ul>
