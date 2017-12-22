@@ -29,11 +29,11 @@
 
 ### Merge branch into master and delete dev branch
 1. Switch to master
-+`git checkout master`
+...`git checkout master`
 2. Merge into the master
-+`git merge <branch name>`
+...`git merge <branch name>`
 3. Remove dev branch
-+`git branch -D dev`
+...`git branch -D dev`
 
 
 ### Create dev branch and merge changes to master
