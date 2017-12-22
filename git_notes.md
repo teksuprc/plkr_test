@@ -10,7 +10,7 @@ Diff changed files for current commit
 
 Create a branch
 ---------------
-'git branch <name>'
+`git branch <name>`
 
 Switch to the new branch
 ------------------------
