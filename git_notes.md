@@ -29,26 +29,39 @@
 
 ### Merge branch into master and delete dev branch
 1. Switch to master
+
 ...`git checkout master`
 2. Merge into the master
+
 ...`git merge <branch name>`
 3. Remove dev branch
+
 ...`git branch -D dev`
 
 
 ### Create dev branch and merge changes to master
 1. Push branch to remote
-+`git branch dev`
-+`git checkout dev`
+
+...`git branch dev`
+
+...`git checkout dev`
+
 2. Make changes to source, add and commit changes to dev
-+`git add --all`
-+`git commit -m "added changes"`
-+`git push origin new-branch`
+...`git add --all`
+
+...`git commit -m "added changes"`
+
+...`git push origin new-branch`
+
 3. Merge the changes
-+`git checkout master`
-+`git merge new-branch`
+
+...`git checkout master`
+
+...`git merge new-branch`
+
 4. Update changes into master
-+`git push origin master`
+
+...`git push origin master`
 
 
 ### Remove remote branch
