@@ -1,62 +1,55 @@
 
-Overwrite local branch with remote
-----------------------------------
+### Overwrite local branch with remote
 `git reset --hard origin/master`
 
 
-Diff changed files for current commit
--------------------------------------
+### Diff changed files for current commit
 `git diff-tree --no-commit-id --name-only -r <commit id>`
 
-Create a branch
----------------
+
+### Create a branch
 `git branch <name>`
 
-Switch to the new branch
-------------------------
+
+### Switch to the new branch
 `git checkout <branch name>`
 
-Add changes
------------
+
+### Add changes
 `git add --all`
 
-Commit
-------
+
+### Commit
 `git commit -m "comments"`
 
-Switch branches back to master
-------------------------------
+
+### Switch branches back to master
 `git checkout master`
 
-// ---------
-// merge branch into master and delete dev branch
-// switch to master... then merge into the master
+
+### Merge branch into master and delete dev branch
+1. Switch to master
 `git checkout master`
+2. Merge into the master
 `git merge <branch name>`
+3. Remove dev branch
+`git branch -D dev`
 
 
-Remove dev branch
------------------
-`git branch -D <branch name>`
+### Create dev branch and merge changes to master
+1. Push branch to remote
+`git branch dev`
+`git checkout dev`
+2. Make changes to source, add and commit changes to dev
+`git add --all`
+`git commit -m "added changes"`
+`git push origin new-branch`
+3. Merge the changes
+`git checkout master`
+`git merge new-branch`
+4. Update changes into master
+`git push origin master`
 
 
-================================================
-
-
-// push branch to remote
-git branch new-branch
-
-git add --all
-git commit -m "added changes"
-
-git push origin new-branch
-// there are now 2 branches new-branch and master
-
-// merge the changes
-git checkout master
-git merge new-branch
-
-git push origin master
-
-// remove remote branch
-git push <remote url> --delete <branch>
+### Remove remote branch
+`git push <remote url> --delete <branch>`
